@@ -1,90 +1,36 @@
-# NaviGO Maps 🗺️
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-A modern, interactive maps application built with Next.js and MapLibre GL JS. Get directions, search locations, and navigate with ease.
+## Getting Started
 
-## ✨ Features
-
-- 🚗 Multi-modal routing (driving, walking, cycling)
-- 📍 Location search with popular Rwanda destinations
-- 🎯 Click-to-set origin and destination with interactive popups
-- 🛣️ Multiple route alternatives with time and distance
-- 📱 Fully responsive and mobile-friendly
-- 🌍 2D/3D map views
-
-## 🚀 Quick Start
-
-1. **Install dependencies:**
-
-    ```bash
-    npm install
-    ```
-
-2. **Set up environment:**
-
-    ```bash
-    cp .env.example .env
-    ```
-
-    Edit `.env` with your configuration:
-
-    ```env
-    NEXT_PUBLIC_MAP_STYLE_URL=http://localhost:8080/styles/osm-bright/style.json
-    NEXT_PUBLIC_OSRM_API_URL=https://routing.navigo.rw
-    ```
-
-3. **Run the app:**
+First, run the development server:
 
 ```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Visit [http://localhost:3000](http://localhost:3000)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🛠️ Tech Stack
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- **Framework**: Next.js 16 + React 19 + TypeScript
-- **Maps**: MapLibre GL JS
-- **Routing**: OSRM with nginx routing
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## 📡 OSRM Setup
+## Learn More
 
-The app uses OSRM with nginx routing:
+To learn more about Next.js, take a look at the following resources:
 
-```path
-/{profile}/route/v1/{profile}/coordinates
-```
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Where `{profile}` is:
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-- `car` for driving
-- `bike` for cycling
-- `foot` for walking
+## Deploy on Vercel
 
-Example: `https://routing.navigo.rw/bike/route/v1/bike/30.06,-1.96;30.07,-1.95?...`
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## 📁 Project Structure
-
-```tree
-src/
-├── app/              # Next.js pages (page.tsx, layout.tsx, not-found.tsx)
-├── components/maps/  # Map components (MapContainer, MapSidebar, etc.)
-├── lib/              # Utilities (map-utils.ts, constants.ts)
-└── types/            # TypeScript types
-```
-
-## 📱 Usage
-
-1. **Set origin**: Click anywhere on the map → "Set as starting point"
-2. **Set destination**: Click again → "Directions to here"
-3. **View routes**: Up to 3 alternative routes will appear
-4. **Change travel mode**: Select driving, walking, or cycling
-5. **Search locations**: Use the search bar for quick access to popular places
-
-## 🏗️ Build for Production
-
-```bash
-npm run build
-npm start
-```
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
